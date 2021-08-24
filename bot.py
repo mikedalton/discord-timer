@@ -39,7 +39,7 @@ def get_timers():
         minutes = divmod(hours[1], 60)
         text_table.add_row(
             [
-                row[0], '{} days, {} hours, {} minutes ago'.format(delta.days, hours[0], minutes[0])
+                row[0], '{} hours, {} minutes ago'.format((delta.days * 24) + hours[0], minutes[0])
             ]
         )
 
